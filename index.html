@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Draai aan het Rad</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #000; /* volledig zwart */
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      gap: 40px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .banner {
+      max-width: 400px;
+      max-height: 300px;
+      border-radius: 12px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 20px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>Draai aan het Rad</h1>
+      <button onclick="spin()">Klik hier!</button>
+    </div>
+    <img class="banner" src="https://github.com/lucasenlucas/lucasenlucas/blob/main/assets/AB486C1D-4C54-4376-B4D3-7152E503A4F0.PNG?raw=true" alt="Banner">
+  </div>
+
+  <script>
+    const opties = [
+      "Niks",
+      "De volgende keer gratis",
+      "Naar keuze",
+      "De volgende 2 keren achter elkaar gratis"
+    ];
+
+    function spin() {
+      const resultaat = opties[Math.floor(Math.random() * opties.length)];
+      alert("🎉 Je hebt gewonnen: " + resultaat);
+    }
+  </script>
+</body>
+</html>
